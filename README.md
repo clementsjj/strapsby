@@ -1,0 +1,2 @@
+- `cd frontdend/ && gatsby develop`
+- `cd backend/ && yarn strapi dev`
