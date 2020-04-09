@@ -107,6 +107,6 @@ coverage
 # Strapi
 ############################
 
-exports
-.cache
-build
+#exports
+#.cache
+#build
