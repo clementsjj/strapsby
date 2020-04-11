@@ -18,3 +18,20 @@ sudo ufw allow 'OpenSSH'
 sudo ufw allow 22/tcp
 sudo ufw enable
 sudo ufw status
+
+cd ~
+git clone https://github.com/clementsjj/strapsby.git
+
+# Remove default nginx configuration
+sudo rm /etc/nginx/nginx.conf
+sudo rm -rf /etc/nginx/sites-enabled
+sudo rm -rf /etc/nginx/sites-available
+
+# Copy over new configs
+cp ~/strapsby/server/anastasia/config/nginx.conf /etc/nginx/nginx.conf
+cp ~/strapsby/server/anastasia/config/default.conf /etc/nginx/conf.d/default.conf
+
+mkdir ~/www
+mkdir ~/share
+
+cp ~/strapsby/server/anastasia/config/www/index.html ~/www/index.html
