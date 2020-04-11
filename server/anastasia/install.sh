@@ -20,18 +20,21 @@ sudo ufw enable
 sudo ufw status
 
 cd ~
+rm -rf ~/strapsby
+sleep 1
 git clone https://github.com/clementsjj/strapsby.git
+sleep 1
 
 # Remove default nginx configuration
 sudo rm /etc/nginx/nginx.conf
 sudo rm -rf /etc/nginx/sites-enabled
 sudo rm -rf /etc/nginx/sites-available
 
-# Copy over new configs
-cp ~/strapsby/server/anastasia/config/nginx.conf /etc/nginx/nginx.conf
-cp ~/strapsby/server/anastasia/config/default.conf /etc/nginx/conf.d/default.conf
-
 mkdir ~/www
 mkdir ~/share
 
-cp ~/strapsby/server/anastasia/config/www/index.html ~/www/index.html
+sudo curl -o /etc/nginx/nginx.conf https://raw.githubusercontent.com/clementsjj/strapsby/master/server/anastasia/config/nginx.conf
+sudo curl -o /etc/nginx/conf.d/default.conf https://raw.githubusercontent.com/clementsjj/strapsby/master/server/anastasia/config/default.conf
+sudo curl -o ~/www/index.html https://raw.githubusercontent.com/clementsjj/strapsby/master/server/anastasia/config/index.html
+
+
