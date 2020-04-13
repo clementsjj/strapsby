@@ -10,6 +10,6 @@ The three primary goals are to:
 3. Maintain a static web presence. 
 
 The servers will likely reside on a domain called `tsarchild.com`, a side project and home for the random collection of code and server snapshots.
-Tsarchild pays homage to Ace Frehley, aka Space Ace, aka Star Child, and also Russian history. 
+Tsarchild pays homage to Paul Stanley, aka The Starchild, and also Russian history. 
 
 That is why the first iteration of server config is named "Anastasia", the daughter of the last Tsar of Russia, Tsar Nicholas II of the infamous Romanov Dynasty. 
