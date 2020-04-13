@@ -33,8 +33,14 @@ sudo rm -rf /etc/nginx/sites-available
 mkdir ~/www
 mkdir ~/share
 
+# There is some problem here running the original code that copies the files from the git clone
+# Not sure why I'm getting the error
+# But curling the file from the actual github repo seems to work fine for now
+# Seeing as I am already cloning the github repo, itd be nice to use those files
+# Possibly a sudo issue??
+# ~~~~~~~~~~~~~~~~~~~~~~~~
 sudo curl -o /etc/nginx/nginx.conf https://raw.githubusercontent.com/clementsjj/strapsby/master/server/anastasia/config/nginx.conf
 sudo curl -o /etc/nginx/conf.d/default.conf https://raw.githubusercontent.com/clementsjj/strapsby/master/server/anastasia/config/default.conf
 sudo curl -o ~/www/index.html https://raw.githubusercontent.com/clementsjj/strapsby/master/server/anastasia/config/index.html
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~
 
