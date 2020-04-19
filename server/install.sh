@@ -13,6 +13,7 @@ sudo apt-get install sqlite3
 sudo apt update
 sudo apt install -y nginx
 
+## ENSURE PORT 22 IS OPEN!
 sudo ufw allow 'Nginx Full'
 sudo ufw allow 'OpenSSH'
 sudo ufw allow 22/tcp
